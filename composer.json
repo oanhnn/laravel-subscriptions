@@ -1,0 +1,67 @@
+{
+  "name": "oanhnn/laravel-subscriptions",
+  "type": "library",
+  "description": "Easy provide subscription feature for Your Laravel 5.5+ Application",
+  "keywords": [
+    "laravel",
+    "package",
+    "subscriptions",
+    "subscription",
+    "pricing"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/oanhnn/laravel-subscriptions",
+  "authors": [
+    {
+      "name": "Oanh Nguyen",
+      "email": "oanhnn.bk@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1.3",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "illuminate/database": "^5.5",
+    "illuminate/support": "^5.5",
+    "spatie/eloquent-sortable": "^3.4",
+    "spatie/laravel-sluggable": "^2.1",
+    "spatie/laravel-translatable": "^3.1"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.0",
+    "orchestra/database": "^3.5",
+    "orchestra/testbench": "^3.5",
+    "phpunit/phpunit": "^6.3|^7.0",
+    "squizlabs/php_codesniffer": "^3.2"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Laravel\\Subscriptions\\ServiceProvider"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Laravel\\Subscriptions\\": "src/"
+    }
+  },
+  "scripts": {
+    "test": [
+      "@php vendor/squizlabs/php_codesniffer/bin/phpcs",
+      "@php vendor/phpunit/phpunit/phpunit --coverage-html storage/coverage"
+    ],
+    "format": [
+      "@php vendor/squizlabs/php_codesniffer/bin/phpcbf"
+    ]
+  },
+  "support": {
+    "issues": "https://github.com/oanhnn/laravel-subscriptions/issues",
+    "source": "https://github.com/oanhnn/laravel-subscriptions"
+  }
+}
